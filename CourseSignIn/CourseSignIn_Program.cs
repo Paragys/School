@@ -12,7 +12,7 @@ string? experience = Console.ReadLine();
 Console.Write("How many hours per week do you plan to dedicate to this course? ");
 string? hoursInput = Console.ReadLine();
 // Calculate the total number of hours the user will dedicate to the course over the term (assuming a 10-week term) and store in a variable
-int totalHours = int.Parse(hoursInput) * 10;
+int totalHours = int.Parse(hoursInput!) * 10;
 Console.WriteLine($"Great! You plan to dedicate {hoursInput} hours per week to this course. Over the course of the term, that will add up to roughly {totalHours} hours of learning and practice!");
 // Give a summary message that includes name, proor experience, planned weekly hours, and calculated total term hours
 Console.WriteLine($"Alright, {name}, hope you're ready for a fun term!");
