@@ -21,5 +21,6 @@ if (experience == "none")
     Console.WriteLine($"Don't worry, {name}, we'll start from the basics and build your skills step by step!");
 else
     Console.WriteLine($"That's awesome, {name}! Your experience in {experience} will definitely give you a head start in this course!");
+Console.WriteLine($"Alright, {name}, you plan to spend {hoursInput} hours per week on this course, equating to roughly {totalHours} hours over the term.");
 // Final message of encouragement
 Console.WriteLine($"Thanks for sharing a little about yourself, {name}! You should really stop filling this out and get to work on your first assignment! I hope you have a great term!");
