@@ -1,9 +1,7 @@
-﻿object input = 3; // change this line for each trial
-if (input is int n && n > 5)
-Console.WriteLine($"Big number: {n}");
-else if (input is int num && num <= 5)
-Console.WriteLine($"Small number: {num}");
-else if (input is string s)
-Console.WriteLine($"Text of length {s.Length}");
-else
-Console.WriteLine("Something else"); 
+﻿int daysLate = 7;
+int fee;
+if (daysLate >= 14) { fee = 5; }
+else if (daysLate >= 7) { fee = 3; }
+else if (daysLate >= 1) { fee = 1; }
+else { fee = 0; }
+Console.WriteLine($"{daysLate} days late -> fee ${fee}");
