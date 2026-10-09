@@ -10,4 +10,4 @@ string result =  weightKg switch
     _ => "Invalid weight"
 };
 
-Console.WriteLine($"{weightKg}kg results in: {result}.");
+Console.WriteLine($"{weightKg}kg: {result}.");
