@@ -1,7 +1,9 @@
-﻿int total = 0;
-for (int i = 1; i <= 5; i++)
+﻿static void IncrementAttempts(ref int attempts)
 {
-total += i;
-Console.WriteLine($"Adding day {i}, running total: {total}");
+attempts++;
 }
-Console.WriteLine($"Final total after 5 days should be 15, got: {total}");
+int attempts = 0;
+IncrementAttempts(ref attempts);
+IncrementAttempts(ref attempts);
+IncrementAttempts(ref attempts);
+Console.WriteLine($"Total attempts: {attempts}");
