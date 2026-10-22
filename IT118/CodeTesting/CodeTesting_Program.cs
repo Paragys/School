@@ -1,7 +1,5 @@
-﻿int daysLate = 7;
-int fee;
-if (daysLate >= 14) { fee = 5; }
-else if (daysLate >= 7) { fee = 3; }
-else if (daysLate >= 1) { fee = 1; }
-else { fee = 0; }
-Console.WriteLine($"{daysLate} days late -> fee ${fee}");
+﻿for(int i = 10; i >= 1; i -= 2)
+{
+Console.WriteLine($"Countdown value: {i}");
+}
+Console.WriteLine("Blast off!");
