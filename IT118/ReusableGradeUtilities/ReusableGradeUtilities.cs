@@ -4,7 +4,7 @@ Console.WriteLine("Standard Scores");
 ProcessAndPrint(examScores);
 
 int[] boundaryScores = { 90, 90, 90, 90, 90 };
-Console.WriteLine("Boundary");
+Console.WriteLine("Honor roll boundary (90)");
 ProcessAndPrint(boundaryScores);
 
 int[] invalidScores = { -42, 20, 0 };
