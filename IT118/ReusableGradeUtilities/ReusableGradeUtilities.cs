@@ -11,38 +11,6 @@ int[] invalidScores = { -42, 20, 0 };
 Console.WriteLine("Errors");
 ProcessAndPrint(invalidScores);
 
-static void ProcessAndPrint(int[] scores)
-{
-    double average = CalculateAverage(scores);
-    Console.WriteLine($"Class Average: {average}");
-
-    bool isValid = TryGetLetterGrade(average, out string letterGrade);
-    if (isValid)
-    {
-        Console.WriteLine($"Letter Grade: {letterGrade}");
-    }
-    else
-    {
-        Console.WriteLine($"Error: The average {average} is outside the valid 0-100 range.");
-    }
-
-    int honorRollCount = CountAboveThreshold(scores, 90);
-    Console.WriteLine($"Honor Roll Count (Scores 90+): {honorRollCount}");
-}
-
-static double CalculateAverage(int[] scores)
-{
-    if (scores.Length == 0) return 0;
-    
-    int total = 0;
-    foreach (int score in scores)
-    {
-        total += score;
-    }
-    
-    return (double)total / scores.Length;
-}
-
 static bool TryGetLetterGrade(double average, out string letterGrade)
 {
     if (average < 0 || average > 100)
@@ -74,4 +42,36 @@ static int CountAboveThreshold(int[] scores, int threshold)
         }
     }
     return count;
+}
+
+static double CalculateAverage(int[] scores)
+{
+    if (scores.Length == 0) return 0;
+    
+    int total = 0;
+    foreach (int score in scores)
+    {
+        total += score;
+    }
+    
+    return (double)total / scores.Length;
+}
+
+static void ProcessAndPrint(int[] scores)
+{
+    double average = CalculateAverage(scores);
+    Console.WriteLine($"Class Average: {average}");
+
+    bool isValid = TryGetLetterGrade(average, out string letterGrade);
+    if (isValid)
+    {
+        Console.WriteLine($"Letter Grade: {letterGrade}");
+    }
+    else
+    {
+        Console.WriteLine($"Error: The average {average} is outside the valid 0-100 range.");
+    }
+
+    int honorRollCount = CountAboveThreshold(scores, 90);
+    Console.WriteLine($"Honor Roll Count (Scores 90+): {honorRollCount}");
 }
