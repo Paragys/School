@@ -1,9 +1,6 @@
-﻿static void IncrementAttempts(ref int attempts)
+﻿int[] prices = { 12, 15, 11, 18, 20 };
+for (int i = 0; i < prices.Length - 1; i++)
 {
-attempts++;
+int change = prices[i + 1] - prices[i];
+Console.WriteLine($"Day {i} to day {i + 1}: change of {change}");
 }
-int attempts = 0;
-IncrementAttempts(ref attempts);
-IncrementAttempts(ref attempts);
-IncrementAttempts(ref attempts);
-Console.WriteLine($"Total attempts: {attempts}");

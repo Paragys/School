@@ -1,5 +1,5 @@
 ﻿
-int[] examScores = { 77, 92, 14, 65, 95, 56, 82, 99 };
+int[] examScores = { 55, 78, 92, 64, 88, 71, 45, 99 };
 Console.WriteLine("Standard Scores");
 ProcessAndPrint(examScores);
 
@@ -7,7 +7,7 @@ int[] boundaryScores = { 90, 90, 90, 90, 90 };
 Console.WriteLine("Honor roll boundary (90)");
 ProcessAndPrint(boundaryScores);
 
-int[] invalidScores = { -42, 20, 0 };
+int[] invalidScores = { -101, 101, 0 };
 Console.WriteLine("Errors");
 ProcessAndPrint(invalidScores);
 
