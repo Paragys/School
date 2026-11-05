@@ -1,6 +1,16 @@
-﻿int[] prices = { 12, 15, 11, 18, 20 };
-for (int i = 0; i < prices.Length - 1; i++)
+﻿string[] scoresText = { "72", "88", "ninety-one", "60" };
+int total = 0;
+
+foreach (string text in scoresText)
 {
-int change = prices[i + 1] - prices[i];
-Console.WriteLine($"Day {i} to day {i + 1}: change of {change}");
+    if (int.TryParse(text, out int score))
+    {
+        total += score;
+        Console.WriteLine($"Running total: {total}");
+    }
+    else
+    {
+        Console.WriteLine($"Skipping invalid score: {text}");
+    }
 }
+Console.WriteLine($"Final total: {total}");
