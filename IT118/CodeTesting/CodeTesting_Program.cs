@@ -1,4 +1,8 @@
-﻿int attempts = 0;
+﻿static void IncrementAttempts(ref int attempts)
+{
+attempts++;
+}
+int attempts = 0;
 IncrementAttempts(ref attempts);
 IncrementAttempts(ref attempts);
 IncrementAttempts(ref attempts);
