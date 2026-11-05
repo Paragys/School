@@ -28,5 +28,4 @@ string finalReport = report.ToString();
 Console.WriteLine(finalReport);
 
 double average = (double)totalScore / validCount;
-
 Console.WriteLine($"Average valid score: {average:F2}");
